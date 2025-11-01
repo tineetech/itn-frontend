@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Play, ChevronDown } from 'lucide-react';
 import './index.css';
 
@@ -13,42 +13,12 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  
   return (
     <>
       <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 border-2 border-white rounded transform rotate-45"></div>
-              </div>
-              <div className="text-white">
-                <div className="text-sm font-light">Digi Net Jaya Internet</div>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <div className="flex items-center space-x-2">
-              <button className="px-6 py-2 bg-emerald-500 text-white rounded-full text-sm font-medium hover:bg-emerald-600 transition-colors">
-                Beranda
-              </button>
-              <button className="px-4 py-2 text-white rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center">
-                Layanan
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <button className="px-4 py-2 text-white rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
-                Kemitraan
-              </button>
-              <button className="px-4 py-2 text-white rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
-                Pusat Bantuan
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
+      
 
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-20">
@@ -99,7 +69,6 @@ function App() {
                   
                   {/* Network lines */}
                   {[...Array(12)].map((_, i) => {
-                    const angle = (i * 30 * Math.PI) / 180;
                     return (
                       <div
                         key={i}
