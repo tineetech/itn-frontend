@@ -1,5 +1,5 @@
 import React from 'react';
-import Robot3 from '../../public/assets/robot3.png';
+import Robot3 from '../assets/robot3.png';
 
 const FeaturesSection: React.FC = () => {
   const features = [

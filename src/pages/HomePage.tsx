@@ -1,15 +1,19 @@
 import React from 'react';
 import { MainLayout } from '../layouts/MainLayout';
-import bannerImage from '../../public/assets/banner_1.png';
-import MitraStrategis from '../../public/assets/mitra_strategis.png';
-import Telkom from '../../public/assets/telkomdll.png';
+import bannerImage from '../assets/banner_1.png';
+import MitraStrategis from '../assets/mitra_strategis.png';
+import Telkom from '../assets/telkomdll.png';
 import { ChevronDown, Play } from 'lucide-react';
 import FeaturesSection from '../components/FeatureSection';
 import PricingSection from '../components/PricingSection';
+import DipercayaOleh from '../assets/dipercaya_oleh.png';
+import ArticlesSection from '../components/ArticleSection';
+import CTASection from '../components/CTASection';
 
 const HomePage: React.FC = () => {
   return (
     <MainLayout showSidebar={false}>
+
   {/* Banner */}
   <div className="relative h-lvh">
     <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' />
@@ -47,6 +51,15 @@ const HomePage: React.FC = () => {
   </div>
 
   <PricingSection />
+
+  <div className='mt-10 px-20'>
+    <img src={DipercayaOleh} alt="" className='w-full' />
+  </div>
+
+  <ArticlesSection />
+
+  <CTASection />
+  
 </MainLayout>
   );
 };

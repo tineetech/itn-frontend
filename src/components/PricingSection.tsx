@@ -80,9 +80,9 @@ const PricingSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-3 font-nevan">
             <span className="text-blue-900">PAKET</span>{' '}
-            <span className="text-emerald-500">UNGGULAN</span>
+            <span className="text-[#4caf50]">UNGGULAN</span>
           </h2>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-500 text-sm mt-5">
             Pilihan paket sesuai kebutuhan, dari pribadi hingga bisnis.
           </p>
         </div>

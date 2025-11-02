@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import Logo from '../../public/assets/logo.png';
+import Logo from '../assets/logo.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const location = useLocation();
+
   const [isLayananOpen, setIsLayananOpen] = useState(false);
 
   return (
@@ -13,40 +16,40 @@ const Header: React.FC = () => {
 
         {/* Navigation */}
         <nav className="flex items-center gap-6 bg-[#00051f] rounded-full pr-4 z-2">
-          <button className="bg-[#009a49] hover:bg-emerald-600 text-white px-6 py-3 rounded-full transition-colors">
+          <Link to="/" className={`${location.pathname === '/' ? 'bg-[#009a49] hover:bg-emerald-600' : ''} text-white px-6 py-2 rounded-full transition-colors`}>
             Beranda
-          </button>
+          </Link>
 
           <div className="relative">
             <button
               onClick={() => setIsLayananOpen(!isLayananOpen)}
-              className="text-white hover:text-emerald-300 flex items-center gap-1 transition-colors"
+              className={`${location.pathname.includes('/layanan') ? 'bg-[#009a49] hover:bg-emerald-600 rounded-full px-4 py-2' : ''} text-white hover:text-emerald-300 flex items-center gap-1 transition-colors`}
             >
               Layanan
               <ChevronDown className="w-4 h-4" />
             </button>
             {isLayananOpen && (
               <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg py-2 w-48 z-50">
-                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                  Layanan 1
-                </a>
-                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                  Layanan 2
-                </a>
-                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <Link to="/layanan/internet" className="block px-4 py-2 text-gray-700 hover:bg-gray-100" onClick={() => setIsLayananOpen(false)}>
+                  Internet Home
+                </Link>
+                <Link to="/layanan/infrastruktur" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  IT Infrastruktur / Software
+                </Link>
+                {/* <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                   Layanan 3
-                </a>
+                </a> */}
               </div>
             )}
           </div>
 
-          <button className="text-white hover:text-emerald-300 transition-colors">
+          <Link to="/kemitraan" className={`${location.pathname === '/kemitraan' ? 'bg-[#009a49] hover:bg-emerald-600 rounded-full px-4 py-2' : ''} text-white hover:text-emerald-300 transition-colors`}>
             Kemitraan
-          </button>
+          </Link>
 
-          <button className="text-white hover:text-emerald-300 transition-colors">
+          <Link to="/pusat-bantuan" className={`${location.pathname === '/pusat-bantuan' ? 'bg-[#009a49] hover:bg-emerald-600 rounded-full px-4 py-2' : ''} text-white not-visited:text-white hover:text-emerald-300 transition-colors`}>
             Pusat Bantuan
-          </button>
+          </Link>
         </nav>
       </div>
     </header>
