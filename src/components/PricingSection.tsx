@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import BelakangPrice from '../assets/belakang_price.png';
 
 const PricingSection: React.FC = () => {
   const plans = [
@@ -46,33 +47,8 @@ const PricingSection: React.FC = () => {
 
   return (
     <section className="bg-gray-50 py-20 px-6 relative overflow-hidden">
-      {/* Decorative wave lines */}
-      <div className="absolute left-0 top-0 w-64 h-full opacity-10">
-        <svg viewBox="0 0 200 400" className="w-full h-full">
-          {[...Array(30)].map((_, i) => (
-            <path
-              key={i}
-              d={`M 0 ${i * 15} Q 50 ${i * 15 + 20} 100 ${i * 15}`}
-              stroke="#0ea5e9"
-              strokeWidth="0.5"
-              fill="none"
-            />
-          ))}
-        </svg>
-      </div>
-
-      <div className="absolute right-0 top-0 w-64 h-full opacity-10">
-        <svg viewBox="0 0 200 400" className="w-full h-full">
-          {[...Array(30)].map((_, i) => (
-            <path
-              key={i}
-              d={`M 200 ${i * 15} Q 150 ${i * 15 + 20} 100 ${i * 15}`}
-              stroke="#0ea5e9"
-              strokeWidth="0.5"
-              fill="none"
-            />
-          ))}
-        </svg>
+      <div className='absolute left-0 -top-30'>
+        <img src={BelakangPrice} className='opacity-25' />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">

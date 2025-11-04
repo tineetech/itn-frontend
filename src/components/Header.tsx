@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     <header className="bg-gradient-to-b from-[#02091e] to-blue-950 py-6 px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <img src={Logo} alt="SafeNet Logo" className="h-15 w-30 object-cover" />
+        <img src={Logo} alt="SafeNet Logo" className="h-15 w-30 z-10 object-cover" />
 
         {/* Navigation */}
         <nav className="flex items-center gap-6 bg-[#00051f] rounded-full pr-4 z-2">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Robot3 from '../assets/robot3.png';
+import BelakangRobot from '../assets/belakang_robot.png';
 
 const FeaturesSection: React.FC = () => {
   const features = [
@@ -55,12 +56,8 @@ const FeaturesSection: React.FC = () => {
       </div>
 
       {/* Decorative dots */}
-      <div className="absolute right-40 top-1/3 opacity-20">
-        <div className="grid grid-cols-4 gap-2">
-          {[...Array(16)].map((_, i) => (
-            <div key={i} className="w-2 h-2 bg-gray-400 rounded-full" />
-          ))}
-        </div>
+      <div className="absolute right-0 top-20 opacity-20">
+        <img src={BelakangRobot} className='object-contain w-50' />
       </div>
     </section>
   );
