@@ -13,11 +13,33 @@ import Video1 from '../assets/Video Background 1.mp4';
 import {ArrowRight} from 'lucide-react';
 import delapanRibu from '../assets/8000.png';
 import HexBlinkIcon from '../components/HexBlinkIcon';
+import i1 from '../assets/i1.png';
+import i2 from '../assets/i2.png';
+import i3 from '../assets/i3.png';
+import i4 from '../assets/i4.png';
 
 const HomePage: React.FC = () => {
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const icons = ["../assets/i1.png", "../assets/i2.png", "../assets/i3.png", "../assets/i4.png"]; // ganti dengan ikonmu
+  const [active, setActive] = useState(0);
+  const [allOn, setAllOn] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < 4) {
+        setActive(index);
+        setAllOn(false);
+        index++;
+      } else {
+        setAllOn(true);
+        index = 0;
+      }
+    }, 700); // durasi per langkah
+    return () => clearInterval(interval);
+  }, []);
 
   const words = [
     { text: "Disconnected Calls", color: "text-green-400" },
@@ -163,6 +185,37 @@ const HomePage: React.FC = () => {
         </div>
         <div className='ml-3'>VIDEO PROFILE KAMI</div>
       </div>
+    </div>
+
+    <div className="absolute right-3 bottom-40 flex items-center">
+      {icons.map((src, i) => (
+        <div
+          key={i}
+          className={`
+            relative w-20 h-20 flex items-center justify-center
+            hex-wrapper transition-all duration-500
+            ${i === 1 || i === 3 ? "-translate-y-12 -translate-x-6" : ""}
+            ${i === 2 ? "-translate-x-12" : ""}
+            ${i === 3 ? "-translate-x-18" : ""}
+            ${(allOn || active === i) ? "glow-yellow" : "dim-yellow"}
+          `}
+        >
+
+          {/* SVG border hexagon */}
+          <svg
+            className="absolute inset-0 w-full h-full z-10 pointer-events-none"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon
+              points="25,5 75,5 100,50 75,95 25,95 0,50"
+              className="hex-border"
+            />
+          </svg>
+          
+          <img src={`${src}`} alt={`icon-${i}`} className="w-10 h-10 object-contain opacity-80" />
+        </div>
+      ))}
     </div>
     </div>
 

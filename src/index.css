@@ -3,3 +3,57 @@
 .font-nevan {
     font-family: "Nevan RUS";
 }
+
+/* Latar belakang hexagon */
+.hex-wrapper {
+    position: relative;
+    clip-path: polygon(
+      25% 5%,
+      75% 5%,
+      100% 50%,
+      75% 95%,
+      25% 95%,
+      0% 50%
+    );
+    background: rgba(20, 20, 20, 0.6);
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  /* Garis border hexagon (via SVG polygon) */
+  .hex-border {
+    fill: none;
+    stroke: rgba(120, 183, 255, 0.6);
+    stroke-width: 2.5;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hex aktif menyala */
+  .glow-yellow {
+    background: rgba(255, 255, 150, 0.1);
+  }
+  
+  .glow-yellow .hex-border {
+    stroke: rgb(120, 194, 255);
+    filter: drop-shadow(0 0 6px rgba(100, 180, 255, 0.9))
+            drop-shadow(0 0 15px rgba(60, 144, 255, 0.6))
+            drop-shadow(0 0 30px rgba(45, 30, 255, 0.4));
+  }
+  
+  /* Hex redup */
+  .dim-yellow {
+    background: rgba(20, 20, 10, 0.5);
+  }
+  
+  .dim-yellow .hex-border {
+    stroke: rgba(100, 128, 255, 0.25);
+    filter: drop-shadow(0 0 3px rgba(112, 60, 255, 0.2));
+  }
+  
+  
+  
+  
+
+
+  
+  
