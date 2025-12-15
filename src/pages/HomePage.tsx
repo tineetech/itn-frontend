@@ -229,18 +229,37 @@ const HomePage: React.FC = () => {
     <FeaturesSection />
   </div>
 
-  <div className='px-10'>
+  <div className='px-10 pt-20 bg-zinc-50'>
     <img src={MitraStrategis} alt="" />
+    <div className='flex flex-wrap pt-5 gap-3 justify-center'>
+      <img src='assets/mitra/telkom.jpg' alt="" className='w-30 ' />
+      <img src='assets/mitra/identik.jpg' alt="" className='w-30 ' />
+      <img src='assets/mitra/polda-lampung.jpg' alt="" className='w-30 ' />
+      <img src='assets/mitra/newcentral.jpg' alt="" className='w-30 ' />
+      <img src='assets/mitra/apji.jpg' alt="" className='w-30 ' />
+      <img src='assets/mitra/polda-lampung.jpg' alt="" className='w-30 ' />
+
+    </div>
   </div>
 
-  <div className='mt-20'>
-    <img src={Telkom} alt="" className='w-4xl mx-auto' />
-  </div>
 
   <PricingSection />
 
-  <div className='mt-10 px-20'>
-    <img src={DipercayaOleh} alt="" className='w-full' />
+  <div className='px-10 flex flex-wrap justify-between items-center pb-20 bg-zinc-50'>
+    {/* <img src={MitraStrategis} alt="" /> */}
+    <div>
+      <h1 className='text-xl font-bold'>DIPERCAYA OLEH</h1>
+      <p>Perusahaan & Instusi Ternama di Indonesia.</p>
+    </div>
+    <div className='flex flex-wrap pt-5 gap-3 justify-center'>
+      <img src='assets/mitra/bkk.jpg' alt="" className='w-30 object-contain ' />
+      <img src='assets/mitra/bawaslu.jpg' alt="" className='w-30 object-contain ' />
+      <img src='assets/mitra/malkartini.jpg' alt="" className='w-30 object-contain ' />
+      <img src='assets/mitra/sigertv.jpg' alt="" className='w-30 object-contain ' />
+      <img src='assets/mitra/apji.jpg' alt="" className='w-30 object-contain ' />
+      <img src='assets/mitra/tripanca.jpg' alt="" className='w-30 object-contain ' />
+
+    </div>
   </div>
 
   <ArticlesSection />
