@@ -4,7 +4,7 @@ import bannerImage from '../assets/banner2.png';
 import bannerImage1 from '../assets/banner5_1.png';
 import { ChevronDown, Play } from 'lucide-react';
 import AboutUsSection from '../components/AboutSection';
-import FeaturesSection from '../components/FeatureSection';
+import FeaturesSection2 from '../components/FeatureSection2';
 import CTASection from '../components/CTASection';
 
 const stats = [
@@ -174,7 +174,7 @@ const AboutPage: React.FC = () => {
       <span className='text-[#4caf50]'>KAMI</span>
     </div>
     
-    <FeaturesSection />
+    <FeaturesSection2 />
   </div>
 
     <CTASection />

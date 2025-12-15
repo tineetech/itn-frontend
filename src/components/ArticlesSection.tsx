@@ -116,7 +116,7 @@ export default function ArticlesSection() {
 
         {/* Articles Grid Section */}
         <div>
-          <h3 className="text-3xl font-bold text-gray-300 mb-8 tracking-wider">
+          <h3 className="text-5xl text-gray-400 mb-8 tracking-wider font-nevan">
             ARTIKEL TERBARU
           </h3>
 
