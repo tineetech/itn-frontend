@@ -3,7 +3,7 @@ import { Calendar, User, ArrowRight } from 'lucide-react';
 
 export default function ArticlesSection() {
   const featuredArticle = {
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    image: "/assets/peron3.jpg",
     badge: "Teknologi",
     title: "Lorem ipsum dolor sit amet consectetur. Nisl mattis tellus at sit faucibus.",
     excerpt: "Lorem ipsum dolor sit amet consectetur. Duis facilisi urna posuere velit ac eu ipsum sed. Velit egestas et magna tellus venenatis. Urna velit massa at nulla amet mauris et ultrices et. Enim neque magna ante ornare. Porttitor ut mauris nibh cursus tempor. Porttitor aliquam porttitor turpis amet consectetur. Vel cursus pulvinar lorem.",
@@ -15,7 +15,7 @@ export default function ArticlesSection() {
   const articles = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80",
+      image: "/assets/laptop2.jpg",
       badge: "Teknologi",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl.",
       date: "20 Jan 2024",
@@ -23,7 +23,7 @@ export default function ArticlesSection() {
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80",
+      image: "/assets/sky.jpg",
       badge: "Inovasi",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl.",
       date: "18 Jan 2024",
@@ -31,7 +31,7 @@ export default function ArticlesSection() {
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80",
+      image: "/assets/bukit.jpg",
       badge: "Bisnis",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl.",
       date: "15 Jan 2024",
@@ -39,7 +39,7 @@ export default function ArticlesSection() {
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=400&q=80",
+      image: "/assets/kaset.jpg",
       badge: "Tutorial",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl.",
       date: "12 Jan 2024",
@@ -47,7 +47,7 @@ export default function ArticlesSection() {
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&q=80",
+      image: "/assets/singa.jpg",
       badge: "Panduan",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl odio tempus.",
       date: "10 Jan 2024",
@@ -55,7 +55,7 @@ export default function ArticlesSection() {
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+      image: "/assets/car.jpg",
       badge: "Berita",
       title: "Lorem ipsum dolor sit amet consectetur. Dignissim tempus elit ac nisl.",
       date: "08 Jan 2024",
@@ -95,8 +95,9 @@ export default function ArticlesSection() {
 
               {/* Author Info */}
               <div className="flex items-center gap-4 pt-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 overflow-hidden bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  {/* <User className="w-6 h-6 text-white" /> */}
+                  <img src="/assets/person2.jpg" alt="" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-900">{featuredArticle.author}</p>

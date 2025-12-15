@@ -12,6 +12,11 @@ const Header: React.FC = () => {
   const isActive = (path: string) =>
     location.pathname === path || location.pathname.includes(path);
 
+  const isActiveExact = (path: string) => location.pathname === path;
+
+  const isActiveStartsWith = (path: string) =>
+    location.pathname === path || location.pathname.startsWith(path + "/");
+
   return (
     <header className="bg-gradient-to-b from-[#02091e] to-blue-950 py-4 px-6" style={{zIndex: 999}}>
       <div className="max-w-7xl mx-auto flex items-center justify-between"  style={{zIndex: 999}}>
@@ -22,7 +27,7 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center gap-6 bg-[#00051f] rounded-full pr-4 pl-4" style={{zIndex: 999}}>
           <Link
             to="/"
-            className={`${isActive('/') ? 'bg-[#009a49]' : ''} text-white px-6 py-2 rounded-full hover:bg-emerald-600 transition`}
+            className={`${isActiveExact('/') ? 'bg-[#009a49]' : ''} text-white px-6 py-2 rounded-full hover:bg-emerald-600 transition`}
           >
             Beranda
           </Link>
@@ -30,7 +35,7 @@ const Header: React.FC = () => {
           <div className="relative">
             <button
               onClick={() => setIsLayananOpen(!isLayananOpen)}
-              className={`${isActive('/layanan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 flex items-center gap-1 transition`}
+              className={`${isActiveStartsWith('/layanan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 flex items-center gap-1 transition`}
             >
               Layanan
               <ChevronDown className="w-4 h-4" />
@@ -58,14 +63,14 @@ const Header: React.FC = () => {
 
           <Link
             to="/kemitraan"
-            className={`${isActive('/kemitraan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition`}
+            className={`${isActiveExact('/kemitraan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition`}
           >
             Kemitraan
           </Link>
 
           <Link
             to="/pusat-bantuan"
-            className={`${isActive('/pusat-bantuan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition`}
+            className={`${isActiveExact('/pusat-bantuan') ? 'bg-[#009a49]' : ''} text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition`}
           >
             Pusat Bantuan
           </Link>

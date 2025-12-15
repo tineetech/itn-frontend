@@ -41,8 +41,9 @@ export default function AboutUsSection() {
           {/* VISI Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 group">
             <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <CheckCircle2 className="w-7 h-7 text-white" strokeWidth={2.5} />
+              <div className="flex-shrink-0 w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                {/* <CheckCircle2 className="w-7 h-7 text-white" strokeWidth={2.5} /> */}
+                <img src="/assets/visilogo.png" alt="" />
               </div>
               <h2 className="text-2xl font-bold text-blue-900 mt-2">VISI</h2>
             </div>
@@ -58,8 +59,9 @@ export default function AboutUsSection() {
           {/* MISI Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 group">
             <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <CheckCircle2 className="w-7 h-7 text-white" strokeWidth={2.5} />
+              <div className="flex-shrink-0 w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                {/* <CheckCircle2 className="w-7 h-7 text-white" strokeWidth={2.5} /> */}
+                <img src="/assets/misilogo.png" alt="" />
               </div>
               <h2 className="text-2xl font-bold text-blue-900 mt-2">MISI</h2>
             </div>

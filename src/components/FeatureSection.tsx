@@ -32,9 +32,9 @@ const FeaturesSection: React.FC = () => {
       
       {/* Garis Horizontal (atas) */}
       <div className="absolute top-8 left-0 w-full h-[1px] bg-gray-200"></div>
-
       {/* Garis Vertikal (kiri) */}
       <div className="absolute top-0 left-8 h-full w-[1px] bg-gray-200"></div>
+      
       <div className="absolute right-0 top-0 w-1/4 h-full pointer-events-none">
         <img
           src={Robot3}

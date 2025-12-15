@@ -8,27 +8,27 @@ const ArtikelPage: React.FC = () => {
     const categories = [
         {
           name: "#Animal",
-          image: "https://source.unsplash.com/400x200/?dog",
+          image: "/assets/doggy.jpg",
         },
         {
           name: "#Car",
-          image: "https://source.unsplash.com/400x200/?car",
+          image: "/assets/car2.jpg",
         },
         {
           name: "#Sport",
-          image: "https://source.unsplash.com/400x200/?sport",
+          image: "/assets/bola.jpg",
         },
         {
           name: "#Music",
-          image: "https://source.unsplash.com/400x200/?music",
+          image: "/assets/headset.jpg",
         },
         {
           name: "#Technology",
-          image: "https://source.unsplash.com/400x200/?technology",
+          image: "/assets/laptop4.jpg",
         },
         {
           name: "#Nature",
-          image: "https://source.unsplash.com/400x200/?nature",
+          image: "/assets/nature.jpg",
         },
       ];
 
@@ -36,7 +36,28 @@ const ArtikelPage: React.FC = () => {
     <MainLayout showSidebar={false}>
   {/* Banner */}
   <div className="relative h-lvh">
-    <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' />
+    {/* <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' /> */}
+    
+    <video 
+      className="absolute -top-55 left-0 w-full h-[%20]"
+      style={{
+        maskImage: "url('../assets/banner_1.png')",
+        WebkitMaskImage: "url('../assets/banner_1.png')",
+        // maskSize: 'contain',
+        // WebkitMaskSize: 'contain',
+        maskRepeat: 'no-repeat',
+        WebkitMaskRepeat: 'no-repeat',
+        maskPosition: 'center',
+        WebkitMaskPosition: 'center',
+      }}
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={'../assets/Desain tanpa judul (2).mp4'} type="video/mp4" />
+    </video>
+    
     
     <div className='absolute top-40 left-20'>
       <div className='mb-3 font-nevan text-white text-3xl [text-shadow:_0_0_10px_#22c55e]'>

@@ -2,8 +2,39 @@ import React from 'react';
 import Robot5Flip from '../assets/robot5-flip.png';
 import Person from '../assets/person.png';
 
+const testimonials = [
+  {
+    name: "Jhon Doe",
+    location: "Poda Lampung",
+    personImage: Person,
+    text: "Lorem ipsum dolor sit amet consectetur. At in euismod nisl facilisis venenatis tortor."
+  },
+  {
+    name: "Sarah Lee",
+    location: "Jakarta",
+    personImage: Person,
+    text: "Pelayanan sangat cepat dan stabil. Internet jarang gangguan."
+  },
+  {
+    name: "Michael Tan",
+    location: "Bandung",
+    personImage: Person,
+    text: "Support responsif dan harga transparan."
+  }
+];
+
 
 export default function ProfileSection() {
+  const [index, setIndex] = React.useState(0);
+
+  const next = () =>
+    setIndex((prev) => (prev + 1) % testimonials.length);
+
+  const prev = () =>
+    setIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+
   return (
     <div className='min-h-screen pt-50 relative'>
 
@@ -27,44 +58,67 @@ export default function ProfileSection() {
       </div>
 
       {/* Main Card Container */}
-      <div className="relative z-10 flex items-center gap-8">
-        {/* Glass Card */}
-        <div className="relative backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 w-80 h-80 shadow-2xl">
-          {/* Decorative circles in background */}
-          <div className="absolute inset-0 overflow-hidden rounded-3xl">
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-400/20 rounded-full blur-xl"></div>
-            <div className="absolute -top-5 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
-          </div>
-          
-          {/* Content */}
-          <div className="relative z-10">
-            <h2 className="text-3xl font-semibold text-white mb-2">Jhon Doe</h2>
-            <p className="text-blue-300 text-sm">Poda Lampung</p>
-          </div>
-        </div>
+      <div className="relative w-full flex justify-center ">
 
-        {/* Profile Image - Overlapping */}
-        <div className="absolute left-60 z-20">
-          <div className="relative">
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl blur-xl opacity-60 animate-pulse"></div>
-            
-            {/* Image container */}
-            <div className="relative w-40 h-40 bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-              {/* Placeholder for actual image */}
-              <img src={Person} className="w-full h-full object-cover" />
+        {/* SLIDE */}
+        <div
+          key={index}
+          className="
+            relative z-10 flex items-center gap-8
+            transition-all duration-700 ease-in-out
+            animate-fade-slide
+          "
+        >
+          {/* Glass Card */}
+          <div className="relative overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 w-80 h-80 shadow-2xl">
+            <img src="/assets/quote.png" className="absolute bottom-0 left-0 opacity-40" />
+
+            <div className="relative z-10">
+              <h2 className="text-3xl font-semibold text-white mb-2">
+                {testimonials[index].name}
+              </h2>
+              <p className="text-blue-300 text-sm">
+                {testimonials[index].location}
+              </p>
             </div>
           </div>
+
+          {/* Profile Image */}
+          <div className="absolute left-60 z-20">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl blur-xl opacity-40"></div>
+
+              <div className="relative w-40 h-40 rounded-3xl overflow-hidden border-4 border-white/20">
+                <img src={testimonials[index].personImage} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="ml-10 p-6 w-80">
+            <p className="text-gray-300 text-sm leading-relaxed">
+              {testimonials[index].text}
+            </p>
+          </div>
         </div>
 
-        {/* Description Card */}
-        <div className="ml-10 borderounded-2xl p-6 w-80">
-          <p className="text-gray-300 text-sm leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur. At in euismod nisl facilisis venenatis tortor. venenatis et fermentum dui purus.
-          </p>
-          
+        {/* CONTROLS */}
+        <div className="absolute -bottom-20 flex gap-4 mt-6">
+          <button
+            onClick={prev}
+            className="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20"
+          >
+            ‹
+          </button>
+          <button
+            onClick={next}
+            className="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-white hover:bg-white/20"
+          >
+            ›
+          </button>
         </div>
       </div>
+      
 
       {/* Decorative Lines */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>

@@ -42,28 +42,28 @@ const LayananInfrastrukturPage: React.FC = () => {
   return (
     <MainLayout showSidebar={false}>
   {/* Banner */}
-  <div className="relative h-lvh">
+  <div className="relative h-lvh bg-gray-50">
     {/* <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' /> */}
     
-          <video 
-            className="absolute -top-55 left-0 w-full h-[%20]"
-            style={{
-              maskImage: "url('../assets/banner_1.png')",
-              WebkitMaskImage: "url('../assets/banner_1.png')",
-              // maskSize: 'contain',
-              // WebkitMaskSize: 'contain',
-              maskRepeat: 'no-repeat',
-              WebkitMaskRepeat: 'no-repeat',
-              maskPosition: 'center',
-              WebkitMaskPosition: 'center',
-            }}
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src={Video1} type="video/mp4" />
-          </video>
+    <video 
+      className="absolute -top-55 left-0 w-full h-[%20]"
+      style={{
+        maskImage: "url('../assets/banner_1.png')",
+        WebkitMaskImage: "url('../assets/banner_1.png')",
+        // maskSize: 'contain',
+        // WebkitMaskSize: 'contain',
+        maskRepeat: 'no-repeat',
+        WebkitMaskRepeat: 'no-repeat',
+        maskPosition: 'center',
+        WebkitMaskPosition: 'center',
+      }}
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={Video1} type="video/mp4" />
+    </video>
     
     
     <div className='absolute top-40 left-20'>
@@ -84,14 +84,19 @@ const LayananInfrastrukturPage: React.FC = () => {
   </div>
 
   <div> {/* Padding top yang besar */}
-    <div className='font-nevan text-3xl px-30'>
+    <div className='font-nevan text-3xl px-30 bg-gray-50'>
       <span className='text-[#044a81]'>DAFTAR</span>{' '}
       <span className='text-[#4caf50]'>LAYANAN</span>
     </div>
     
   </div>
 
-  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex justify-end p-8 pl-70 pt-40">
+  <div className="min-h-screen relative bg-gradient-to-br from-gray-50 to-white flex justify-end p-8 pl-70 pt-40">
+    
+      {/* Garis Horizontal (atas) */}
+      <div className="absolute bottom-8 left-0 w-full h-[1px] bg-gray-200"></div>
+      {/* Garis Vertikal (kiri) */}
+      <div className="absolute bottom-0 left-10 h-full w-[1px] bg-gray-200"></div>
       <div className="max-w-5xl w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map((service, index) => (

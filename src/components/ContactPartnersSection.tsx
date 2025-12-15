@@ -26,8 +26,8 @@ export default function ContactPartnersSection() {
           {/* Left Card - Company Info */}
           <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-xl transition-all duration-300">
             {/* Company Name */}
-            <h3 className="text-xl font-bold text-blue-600 mb-8 font-nevan">
-              PT. INDONESIA TRANS NETWORK (ITN)
+            <h3 className="text-xl font-bold text-sky-700 mb-8 font-nevan">
+              PT. INDONESIA TRANS NETWORK <span className='text-green-500'>(ITN)</span>
             </h3>
 
             {/* Contact Information */}
@@ -123,8 +123,8 @@ export default function ContactPartnersSection() {
           {/* Right Card - Partners */}
           <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:shadow-xl transition-all duration-300">
             {/* Partners Title */}
-            <h3 className="text-xl font-bold text-blue-600 mb-8 font-nevan">
-              MITRA ITN
+            <h3 className="text-xl font-bold text-sky-700 mb-8 font-nevan">
+              MITRA <span className='text-green-500'>(ITN)</span>
             </h3>
 
             {/* Partners List */}
