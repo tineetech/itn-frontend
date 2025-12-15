@@ -7,6 +7,7 @@ import PricingSection from '../components/PricingSection';
 import DipercayaOleh from '../assets/dipercaya_oleh.png';
 import ProfileSection from '../components/ProfileSection';
 import CTASection from '../components/CTASection';
+import Video1 from '../assets/Video Background 1.mp4';
 
 const LayananInternetPage: React.FC = () => {
   console.log('HalamanLayananInternet dirender');
@@ -14,7 +15,28 @@ const LayananInternetPage: React.FC = () => {
     <MainLayout showSidebar={false}>
   {/* Banner */}
   <div className="relative h-lvh">
-    <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' />
+    {/* <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' /> */}
+    
+              <video 
+                className="absolute -top-55 left-0 w-full h-[%20]"
+                style={{
+                  maskImage: "url('../assets/banner_1.png')",
+                  WebkitMaskImage: "url('../assets/banner_1.png')",
+                  // maskSize: 'contain',
+                  // WebkitMaskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskPosition: 'center',
+                }}
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src={Video1} type="video/mp4" />
+              </video>
+        
     
     <div className='absolute top-40 left-20'>
       <div className='text-green-600 mb-8'>Layanan {'>'} Home Internet</div>

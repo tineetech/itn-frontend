@@ -138,9 +138,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
           </div>
 
           <div className="flex items-center gap-4 text-xs text-gray-600">
-            <a href="#" className="hover:text-emerald-500 transition-colors">Syarat & Ketentuan</a>
-            <a href="#" className="hover:text-emerald-500 transition-colors">Kebijakan Privasi</a>
-            <a href="#" className="hover:text-emerald-500 transition-colors">Service Level Agreement</a>
+            {/* <a href="/kebijakan" className="hover:text-emerald-500 transition-colors">Syarat & Ketentuan</a> */}
+            <a href="/kebijakan" className="hover:text-emerald-500 transition-colors">Kebijakan Privasi</a>
+            <a href="/service-level" className="hover:text-emerald-500 transition-colors">Service Level Agreement</a>
           </div>
 
           <div className="flex items-center gap-3">

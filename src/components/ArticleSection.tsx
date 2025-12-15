@@ -54,7 +54,7 @@ const ArticlesSection: React.FC = () => {
     <section className="bg-white py-20 px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex flex-wrap items-center justify-between mb-12">
           <h2 className="text-4xl font-bold text-transparent [-webkit-text-stroke:0.2px_grey] [text-stroke:0.2px_grey] tracking-widest font-nevan">
             ARTIKEL TERBARU
           </h2>

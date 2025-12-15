@@ -48,7 +48,10 @@ const PricingSection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-20 px-6 relative overflow-hidden">
       <div className='absolute left-0 -top-30'>
-        <img src={BelakangPrice} className='opacity-25' />
+        <img src={BelakangPrice} className='' />
+      </div>
+      <div className='absolute -right-50 -top-10'>
+        <img src={BelakangPrice} className='' />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">

@@ -98,9 +98,9 @@ const HomePage: React.FC = () => {
     </div>
   </div> */}
 
-  <div className="relative h-lvh w-full">
+  <div className="relative h-lvh w-screen ">
       <video 
-        className="absolute -top-55 left-0 w-full h-[%20]"
+        className="absolute -top-55 left-0 w-screen object-cover h-screen md:h-[%20]"
         style={{
           maskImage: "url('../assets/banner_1.png')",
           WebkitMaskImage: "url('../assets/banner_1.png')",
@@ -221,10 +221,10 @@ const HomePage: React.FC = () => {
 
   {/* Keunggulan - tambah padding top besar */}
   <div> {/* Padding top yang besar */}
-    <div className='font-nevan text-3xl text-end px-30'>
+    {/* <div className='font-nevan text-3xl text-end px-30'>
       <span className='text-[#044a81]'>KEUNGGULAN</span>{' '}
       <span className='text-[#4caf50]'>KAMI</span>
-    </div>
+    </div> */}
     
     <FeaturesSection />
   </div>

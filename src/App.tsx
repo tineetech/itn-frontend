@@ -14,6 +14,8 @@ import PeralatanJaringan from './pages/PeralatanJaringanPage';
 import SyaratKetentuanPage from './pages/SyaratKetentuanPage';
 import InformasiKontakPage from './pages/InformasiKontakPage';
 import ArtikelPage from './pages/ArtikelPage';
+import KebijakanPage from './pages/KebijakanPage';
+import ServiceLevelPage from './pages/ServiceLevelPage';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/syarat-dan-ketentuan" element={<SyaratKetentuanPage />} />
         <Route path="/informasi-kontak" element={<InformasiKontakPage />} />
         <Route path="/artikel" element={<ArtikelPage />} />
+        <Route path="/kebijakan" element={<KebijakanPage />} />
+        <Route path="/service-level" element={<ServiceLevelPage />} />
       </Routes>
   )
 }
