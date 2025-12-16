@@ -45,25 +45,25 @@ const LayananInfrastrukturPage: React.FC = () => {
   <div className="relative h-lvh bg-gray-50">
     {/* <img src={bannerImage} className='absolute -top-25 left-0 w-full h-full' /> */}
     
-    <video 
-      className="absolute -top-55 left-0 w-full h-[%20]"
-      style={{
-        maskImage: "url('../assets/banner_1.png')",
-        WebkitMaskImage: "url('../assets/banner_1.png')",
-        // maskSize: 'contain',
-        // WebkitMaskSize: 'contain',
-        maskRepeat: 'no-repeat',
-        WebkitMaskRepeat: 'no-repeat',
-        maskPosition: 'center',
-        WebkitMaskPosition: 'center',
-      }}
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source src={Video1} type="video/mp4" />
-    </video>
+      <video 
+        className="absolute -top-55 left-0 w-full h-[%20]"
+        style={{
+          maskImage: "url('../assets/banner5.png')",
+          WebkitMaskImage: "url('../assets/banner5.png')",
+          maskSize: 'contain',
+          WebkitMaskSize: 'cover',
+          maskRepeat: 'no-repeat',
+          WebkitMaskRepeat: 'no-repeat',
+          maskPosition: 'center',
+          WebkitMaskPosition: 'center',
+        }}
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src={'../assets/Desain tanpa judul (2).mp4'} type="video/mp4" />
+      </video>
     
     
     <div className='absolute top-40 left-20'>

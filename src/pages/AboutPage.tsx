@@ -36,10 +36,10 @@ const AboutPage: React.FC = () => {
     <video 
       className="absolute -top-55 left-0 w-full h-[%20]"
       style={{
-        maskImage: "url('../assets/banner_1.png')",
-        WebkitMaskImage: "url('../assets/banner_1.png')",
-        // maskSize: 'contain',
-        // WebkitMaskSize: 'contain',
+        maskImage: "url('../assets/banner5.png')",
+        WebkitMaskImage: "url('../assets/banner5.png')",
+        maskSize: 'contain',
+        WebkitMaskSize: 'cover',
         maskRepeat: 'no-repeat',
         WebkitMaskRepeat: 'no-repeat',
         maskPosition: 'center',
